@@ -8,6 +8,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     const token = await login(user.username, user.password);
+    console.log(11111111111111, token);
     setToken(token);
   };
   return (
