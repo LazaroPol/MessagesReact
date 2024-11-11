@@ -3,8 +3,8 @@ import Login from "./components/Login";
 import Router from "./app/Router";
 
 const App = () => {
-  const [token] = useUserContext();
-  return <div>{token ? <Router /> : <Login />}</div>;
+  const [user] = useUserContext();
+  return <div>{user ? <Router /> : <Login />}</div>;
 };
 
 export default App;

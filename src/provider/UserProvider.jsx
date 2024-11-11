@@ -7,6 +7,7 @@ const UserProvider = ({ children }) => {
   const [user, setUser] = useState();
   return (
     <AppContext.Provider value={[user, setUser]}>
+      {console.log("ussssssseeeeeeeerrrrrrrrrrrrrrrrr", user)}
       {children}
     </AppContext.Provider>
   );

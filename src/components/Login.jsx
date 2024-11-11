@@ -3,13 +3,14 @@ import { useUserContext } from "../provider/UserProvider";
 import { login } from "../services/api";
 
 const Login = () => {
-  const [user, setUser] = useState();
-  const [, setToken] = useUserContext();
+  const [user, setUser] = useState({});
+  const [, setLoggedUser] = useUserContext();
 
   const handleLogin = async () => {
-    const token = await login(user.username, user.password);
-    console.log(11111111111111, token);
-    setToken(token);
+    console.log(99999999999, user);
+    const usuario = await login(user.username, user.password);
+    console.log("iddddddddddd", usuario.id);
+    setLoggedUser({ id: usuario.id });
   };
   return (
     <div>
